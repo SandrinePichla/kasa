@@ -1,15 +1,25 @@
-import logements from './data/logements.json';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
+import Header from './components/Header'; // On importe le composant
+import Footer from './components/Footer';
+import AppRouter from './components/AppRouter';
+
+import './styles/main.scss';
+
 
 function App() {
   return (
-    <div>
-      <h1>Liste des logements</h1>
-      <ul>
-        {logements.map((logement) => (
-          <li key={logement.id}>{logement.title}</li>
-        ))}
-      </ul>
-    </div>
+    <Router>
+      <div className="App">
+        <Header /> {/* On insère ici le composant */}
+        <main>
+          <AppRouter />
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
