@@ -4,9 +4,6 @@ import Header from './components/Header'; // On importe le composant Header
 import Footer from './components/Footer';
 import AppRouter from './components/AppRouter'; // On importe le composant AppRouter
 
-import './styles/main.scss';
-
-
 function App() {
   return (   
     <div className="App">
