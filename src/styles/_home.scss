@@ -1,0 +1,25 @@
+// ==============================
+//   STYLES - Page d'accueil
+//   Fichier : _home.scss
+// ==============================
+
+.home_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
+  // Exemple : titre principal
+  h1 {
+    font-size: 2rem;
+    color: $secondary-color; // si tu as une variable définie
+    margin-bottom: 1rem;
+  }
+
+  // Exemple : section des logements
+  .home_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+  }
+}
+
