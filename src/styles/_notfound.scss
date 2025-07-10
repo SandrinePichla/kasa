@@ -1,6 +1,29 @@
-// Exemple : titre principal
-  h1 {
-    font-size: 2rem;
-    color: $secondary-color; // si tu as une variable définie
+// ==============================
+//   STYLES - Page NOTFOUND
+//   Fichier : _notfound.scss
+// ==============================
+
+
+  .not_found {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;  
+  
+   .not_found_title {
+    font-size: 288px;
+    color: $primary-color;
+    font-weight: 700;
+    margin-bottom: 1rem;
+   
+  }
+
+  .not_found_text {
+    font-size: 36px;
+    color: $primary-color;
+    font-weight: 500;
     margin-bottom: 1rem;
   }
+}
+
+

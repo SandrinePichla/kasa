@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logements from '../data/logements.json';
 import Banner from '../components/Banner';
-import bannerImg from '../assets/banner.png'; 
+import bannerHomeImg from '../assets/banner_home.png'; 
 
 
 function Home() {
   return (
     <main className="home_container">
-      <Banner image={bannerImg} text="Chez vous, partout et ailleurs" />
+      <Banner image={bannerHomeImg} text="Chez vous, partout et ailleurs" />
        <div className="home_grid">
         {logements.map((logement) => (
           <Link to={`/logement/${logement.id}`} key={logement.id} className="card">

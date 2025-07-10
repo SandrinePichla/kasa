@@ -1,11 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Banner from '../components/Banner';
+import bannerAboutImg from '../assets/banner_about.png'; 
 
 function About() {
   return (
-    <div>
-      <h1>À propos</h1>
-      <p>Page à propos de Kasa</p>
-    </div>
+    <main className="about_container">
+      <Banner image={bannerAboutImg}/>
+       <div className="about_grid">
+        
+      </div>
+    </main>
   );
 }
 

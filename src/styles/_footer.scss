@@ -1,8 +1,14 @@
+// ==============================
+//   STYLES - Composant FOOTER
+//   Fichier : _footer.scss
+// ==============================
+
+
 .footer {
   background-color: black;
   padding: 40px 0;
   text-align: center;
-  color: $text-secondary-color;
+  color: $text-light;
 
   &__logo {
     max-width: 122px;
@@ -16,4 +22,10 @@
     font-weight: 500;
     line-height: 143%;
   }
+  @media (max-width: 768px) {
+  &__text {   
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
 }
