@@ -12,8 +12,8 @@ function Home() {
        <div className="home_grid">
         {logements.map((logement) => (
           <Link to={`/logement/${logement.id}`} key={logement.id} className="card">
-            <img src={logement.cover} alt={logement.title} className="card__img" />
-            <h2 className="card__title">{logement.title}</h2>
+            <img src={logement.cover} alt={logement.title} className="card_img" />
+            <h2 className="card_title">{logement.title}</h2>
           </Link>
         ))}
       </div>

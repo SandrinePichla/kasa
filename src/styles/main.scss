@@ -40,8 +40,12 @@ body {
 }
 
 main {
-  flex: 1;
-  padding: 20px 0;
+  flex: 1 0 auto;
+  padding: 20px 0;  
+}
+
+footer {
+  margin-top: auto;
 }
 
 /* Liens */
