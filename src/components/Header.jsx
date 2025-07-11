@@ -18,7 +18,7 @@ function Header() {
                 isActive ? 'header__link header__link--active' : 'header__link'
               }
             >
-              Accueil
+              ACCUEIL
             </NavLink>
             <NavLink
               to="/a-propos"
@@ -26,7 +26,7 @@ function Header() {
                 isActive ? 'header__link header__link--active' : 'header__link'
               }
             >
-              A propos
+              A PROPOS
             </NavLink>
           </nav>
       </div>

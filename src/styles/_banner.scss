@@ -29,16 +29,21 @@
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 25px;
   }
 }
 
 @media (max-width: 768px) {
+    .banner {  
+  height: 125px;
+  }
+
   .banner_text {
     text-align: left;
     padding-left: 20px; 
     font-size: 24px;
     font-weight: 700;
   }
+
 }

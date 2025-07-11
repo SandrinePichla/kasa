@@ -28,7 +28,37 @@
     display: inline-block;
     margin-top: 2rem;
     font-size: 18px;
+    font-weight: 500;
     color: $text-default;
     text-decoration: underline;
   }
+}
+
+@media (max-width: 768px) {
+
+      .not-found {
+      margin: 0 80px;  
+      text-align: center;     
+      }
+
+      .not-found__title {
+        font-size: 96px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 8rem;
+        margin-top: 7rem;
+    }
+
+      .not-found__text {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 8rem;
+       
+    }
+
+      .not-found a {
+        font-size: 14px;
+        font-weight: 500;
+      } 
 }
