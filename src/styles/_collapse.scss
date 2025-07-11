@@ -14,11 +14,12 @@
     color: $text-light;
   }
 
-  .collapse__title {
-    font-size: 24px;
+  .collapse__title {    
     font-weight: 700;
     margin: 0;
   }
+
+
 
   .collapse__text {
     font-size: 17px;
@@ -59,6 +60,18 @@
     margin: 0;
   }
 }
+}
+
+.about_grid {
+  .collapse__title {
+    font-size: 24px;
+  }
+}
+
+.logement {
+  .collapse__title {
+    font-size: 18px;
+  }
 }
 
 
