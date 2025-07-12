@@ -101,9 +101,10 @@
     flex-direction: column;
     line-height: 1.2;
     
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 768px) {
       font-size: 14px;
     }
+    
   }
 
   &__host-firstname,
