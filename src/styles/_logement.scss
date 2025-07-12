@@ -8,6 +8,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
+  
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__infos {
@@ -18,13 +23,23 @@
     color: $primary-color;
     font-size: 36px;
     font-weight: 500;
+    margin: 0;
+    
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
   }
+  
 
   &__location {
     margin-top: 5px;
     color: $text-default;
     font-size: 18px;
     font-weight: 500;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   &__tags {
@@ -42,25 +57,73 @@
     font-weight: 700;
     color: $text-light;
      list-style: none;
+
+    @media screen and (max-width: 768px) {
+        font-size: 10px;
+        padding: 3px 8px;
+        border-radius: 5px;
+      }
+    }
+
+     &__host-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px; // Gap plus grand entre host et rating
+    
+    @media screen and (max-width: 1000px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 0;
+    }
   }
 
-  &__host {
+   &__host {
     display: flex;
     align-items: center;
+    gap: 15px;
+    
+    @media screen and (max-width: 1000px) {
+      order: 2; // Place l'host à droite
+      gap: 10px;
+    }
   }
 
   &__host-name {
-    margin-right: 10px;
     font-size: 18px;
     font-weight: 500;
     color: $primary-color;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    
+    @media screen and (max-width: 1000px) {
+      font-size: 14px;
+    }
   }
+
+  &__host-firstname,
+  &__host-lastname {
+    display: block;
+  }
+
 
   &__host-picture {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+  }
+  
+
+    // Styles pour le composant Rating en mobile
+  .rating {
+    @media screen and (max-width: 768px) {
+      order: 1; // Place les étoiles à gauche
+    }
   }
 
   &__collapses {
@@ -71,8 +134,7 @@
     & > div {
       flex: 1;
     }
-
-    @media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
       flex-direction: column;
     }
   }

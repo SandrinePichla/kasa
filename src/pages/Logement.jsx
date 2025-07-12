@@ -13,6 +13,19 @@ function Logement() {
   return <Navigate to="/404" />; // ou autre page d’erreur personnalisée
 }
 
+ const formatHostName = (name) => {
+    const names = name.split(' ');
+    if (names.length >= 2) {
+      const firstName = names[0];
+      const lastName = names.slice(1).join(' ');
+      return { firstName, lastName };
+    }
+    return { firstName: name, lastName: '' };
+  };
+
+  const { firstName, lastName } = formatHostName(logement.host.name);
+
+
   return (
     <main className="logement">
       <Slideshow pictures={logement.pictures} />
@@ -30,7 +43,10 @@ function Logement() {
 
         <div className="logement__host-rating">        
         <div className="logement__host">
-          <p className="logement__host-name">{logement.host.name}</p>
+           <div className="logement__host-name">
+              <span className="logement__host-firstname">{firstName}</span>
+              <span className="logement__host-lastname">{lastName}</span>
+            </div>
           <img
             src={logement.host.picture}
             alt={logement.host.name}
