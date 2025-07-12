@@ -4,6 +4,7 @@ import Slideshow from '../components/Slideshow';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
 import logements from '../data/logements.json'; // Ton fichier JSON
+import { Navigate } from 'react-router-dom';
 
 function Logement() {
   const { id } = useParams(); // Récupère l'ID depuis l'URL

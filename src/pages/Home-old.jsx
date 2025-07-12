@@ -12,13 +12,11 @@ function Home() {
       <Banner image={bannerHomeImg} text="Chez vous, partout et ailleurs" />
        <div className="home_grid">
         {logements.map((logement) => (
-        <Card
-          key={logement.id}
-          id={logement.id}
-          title={logement.title}
-          cover={logement.cover}
-        />
-))}
+          <Link to={`/logement/${logement.id}`} key={logement.id} className="card">
+            <img src={logement.cover} alt={logement.title} className="card_img" />
+            <h2 className="card_title">{logement.title}</h2>
+          </Link>
+        ))}
       </div>
     </main>
   );
