@@ -1,55 +1,54 @@
 // ==============================
-//   STYLES - Composant HEADER
+//   STYLES - Composant Header
 //   Fichier : _header.scss
 // ==============================
 
 .header {
-  &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__logo {
-    max-width: 210.32px;
-    max-height: 68px;
-  }
-
-  &__nav {
-    display: flex;
-    gap: 30px;
-  }
-
-  &__link {
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 500;    
-    color: $text-default;
-    
-
-    &--active {
-      text-decoration: underline;      
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-  }
 
-  @media (max-width: 768px) {
-  &__container {   
-    padding: 40px 20px 0px 20px;
-    text-transform: uppercase;
-
-  }
-
-  &__logo {
-    max-width: 122px;
-    max-height: 39.44px;
-  }
-
-  &__link {
-    font-size: 14px;
-    font-weight: 500;
+    &__logo {
+        max-width: 210.32px;
+        max-height: 68px;
     }
-  }
- }
+
+    &__nav {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 500;
+        color: $text-default;
+
+        &--active {
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        &__container {
+            padding: 40px 20px 0;
+            text-transform: uppercase;
+
+        }
+
+        &__logo {
+            max-width: 122px;
+            max-height: 39.44px;
+        }
+
+        &__link {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}

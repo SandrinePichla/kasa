@@ -1,33 +1,28 @@
 // ==============================
-//   STYLES - Page d'accueil
+//   STYLES - Page Home
 //   Fichier : _home.scss
 // ==============================
 
-.home_container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 
-  .home_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    background-color: $background-light;
-    padding: 50px;
-    border-radius: 25px;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        background-color: $background-light;
+        padding: 50px;
+        border-radius: 25px;
 
-   
+        @media (max-width: $breakpoint-mobile) {
+            grid-template-columns: 1fr;
 
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-
-      // 👇 Supprime le fond grisé et les bordures en mobile
-      background-color: transparent;
-      padding: 0;
-      border-radius: 0;
+            // 👇 Supprime le fond grisé et les bordures en mobile
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
     }
-  }
 }
-
-

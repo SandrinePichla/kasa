@@ -1,36 +1,41 @@
+// ==============================
+//   STYLES - Composant Card
+//   Fichier : _card.scss
+// ==============================
+
 .card {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;  
-  aspect-ratio: 1 / 1;  // Utilisation du ratio 1/1 (carré) 
-  color: white;
-  text-decoration: none;
-
-  &__img {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    aspect-ratio: 1 / 1;
+    // Utilisation du ratio 1/1 (carré) 
+    color: white;
+    text-decoration: none;
 
-  &__title {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    font-size: 18px;
-    font-weight: 700;
-    z-index: 2;
-  }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
+    &__title {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        font-size: 18px;
+        font-weight: 700;
+        z-index: 2;
+    }
 
-  @media (max-width: 768px) {
-    aspect-ratio: 5 / 4; // En mobile : plus large
-  &__title {
-    text-align: left;
-    padding-left: 20px; 
-    font-size: 18px;
-    font-weight: 700;
-  }
-}
+    @media (max-width: $breakpoint-mobile) {
+        aspect-ratio: 5 / 4; // En mobile : plus large
+        &__title {
+            text-align: left;
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
 
 }

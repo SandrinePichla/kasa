@@ -1,27 +1,33 @@
-import React, { useState } from 'react';
-import { FaChevronUp } from 'react-icons/fa';
+import React, {useState} from 'react';
+import {FaChevronUp} from 'react-icons/fa';
 
-function Collapse({ title, content }) {
-  const [isOpen, setIsOpen] = useState(false);
+function Collapse({title, content}) {
+    const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div className="collapse">
+    return (
+        <div className="collapse">
 
-      <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
+            <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
 
-        <h2 className="collapse__title">{title}</h2>
+                <h2 className="collapse__title">{title}</h2>
 
-        <FaChevronUp className={isOpen ? 'chevron rotate' : 'chevron'} />
-      
-      </div>
+                <FaChevronUp
+                    className={isOpen
+                        ? 'chevron rotate'
+                        : 'chevron'}/>
 
-      <div className={isOpen ? 'collapse__content open' : 'collapse__content'}>
+            </div>
 
-        <div className="collapse__text">{content}</div>
-        
-      </div>
-    </div>
-  );
+            <div
+                className={isOpen
+                    ? 'collapse__content open'
+                    : 'collapse__content'}>
+
+                <div className="collapse__text">{content}</div>
+
+            </div>
+        </div>
+    );
 }
 
 export default Collapse;

@@ -1,25 +1,23 @@
 // ==============================
-//   STYLES - Page A Propos
+//   STYLES - Page About
 //   Fichier : _about.scss
 // ==============================
 
-.about_container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 
-.about_grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 30px 100px;  
-  margin: 0 auto;
-}
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 100px;
+        margin: 0 auto;
+   
 
-
-@media (max-width: 1000px) {
-  .about_grid {   
-   padding: 0;
-  }
+         @media (max-width: $breakpoint-tablet) {
+            padding: 0;
+        }
+    }
 }
