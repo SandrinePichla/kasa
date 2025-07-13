@@ -11,7 +11,7 @@ function Logement() {
     const logement = logements.find((logement) => logement.id === id);
 
     if (!logement) {
-        return <Navigate to="/404"/>; // ou autre page d’erreur personnalisée
+        return <Navigate to="*"/>; // ou autre page d’erreur personnalisée
     }
 
     const formatHostName = (name) => {

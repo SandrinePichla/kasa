@@ -12,6 +12,11 @@
         height: 415px;
         object-fit: cover;
         border-radius: 30px;
+
+         @media screen and (max-width: $breakpoint-mobile) {
+            height: 300px;
+         }
+        
     }
 
     &__arrow {
