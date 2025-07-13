@@ -45,7 +45,7 @@ function Slideshow({pictures}) {
                     <div className="slideshow__counter">
                             {currentIndex + 1} / {pictures.length}                         
                     </div>
-                </ >
+                </>
                 )}            
         </div>
     );
