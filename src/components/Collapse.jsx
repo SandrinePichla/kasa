@@ -1,27 +1,24 @@
 import React, {useState} from 'react';
 import {FaChevronUp} from 'react-icons/fa';
 
-function Collapse({title, content}) {
+function Collapse({title, content, variant }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="collapse">
+        <div className={`collapse${variant ? ` collapse--${variant}` : ''}`}>
 
             <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
 
                 <h2 className="collapse__title">{title}</h2>
 
                 <FaChevronUp
-                    className={isOpen
-                        ? 'chevron rotate'
-                        : 'chevron'}/>
+                     className={`collapse__chevron${isOpen ? ' collapse__chevron--rotated' : ''}`}
+                />
 
             </div>
 
             <div
-                className={isOpen
-                    ? 'collapse__content open'
-                    : 'collapse__content'}>
+                className={`collapse__content${isOpen ? ' collapse__content--open' : ''}`}>
 
                 <div className="collapse__text">{content}</div>
 

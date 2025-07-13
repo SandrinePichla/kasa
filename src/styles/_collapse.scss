@@ -40,12 +40,12 @@
         margin-bottom: 5px;
     }
 
-    .chevron {
-        transition: transform 0.1s ease;
-    }
+    &__chevron {
+    transition: transform 0.1s ease;
 
-    .rotate {
-        transform: rotate(180deg);
+        &--rotated {
+            transform: rotate(180deg);
+        }
     }
 
     &__content {
@@ -54,12 +54,12 @@
         transition: max-height 0.1s ease;
         background: $text-light;
         padding: 0 15px;
-    }
 
-    &__content.open {
-        max-height: 500px; // Valeur suffisamment grande
-        padding: 15px;
-    }
+        &--open {
+            max-height: 500px;
+            padding: 15px;
+        }
+}
 
     @media (max-width: $breakpoint-mobile) {
         &__title {
@@ -76,14 +76,14 @@
     }
 }
 
-.about__grid {
-    .collapse__title {
-        font-size: 24px;
-    }
+.collapse--about {
+  &__title {
+    font-size: 24px;
+  }
 }
 
-.logement {
-    .collapse__title {
-        font-size: 18px;
-    }
+.collapse--logement {
+  &__title {
+    font-size: 18px;
+  }
 }
