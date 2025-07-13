@@ -9,14 +9,14 @@
 
     &__star {
         font-size: 24px;
-        color: #e3e3e3;
+        color:$star-color-default;
 
         @media screen and (max-width: $breakpoint-mobile) {
             font-size: 16px;
         }
 
         &--filled {
-            color: $primary-color;
+            color: $star-color-filled;
         }
     }
 }
