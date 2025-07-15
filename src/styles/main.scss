@@ -3,67 +3,90 @@
 //   Fichier : _main.scss
 // ==============================
 
+// ========== IMPORTS ==========
+// Import des variables d'abord (nécessaires pour tous les autres fichiers)
 @import './variables';
+
+// Import des composants de layout
 @import './header';
 @import './footer';
+
+// Import des pages
 @import './home';
 @import './about';
 @import './logement';
 @import './notfound';
+
+// Import des composants réutilisables
 @import './banner';
 @import './collapse';
 @import './rating';
 @import './slideshow';
 @import './card';
 
-// RESET BASE
+// ========== RESET CSS ==========
+// Supprime les marges et paddings par défaut de tous les éléments
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  // Inclut padding et border dans la largeur totale
 }
 
+// ========== STYLES GLOBAUX ==========
+// Styles de base pour le body
 body {
-    font-family: $font-family-base;
-    color: $text-default;
-    background-color: $background-white;
-    min-width: 320px;
-    min-height: 100vh;
+    font-family: $font-family-base;    // Police Montserrat
+    color: $text-default;              // Couleur de texte par défaut (noir)
+    background-color: $background-white; // Fond blanc
+    min-width: 320px;                  // Largeur minimale pour éviter les bugs sur très petits écrans
+    min-height: 100vh;                 // Hauteur minimale = hauteur de la fenêtre
 }
 
-/* Conteneur principal de l'application */
+// ========== LAYOUT PRINCIPAL ==========
+
+/* Conteneur principal de l'application React */
 .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 100%;
-    margin: 0 auto; // pour centrer le contenu horizontalement
-    padding: 0;
+    display: flex;                     // Flexbox pour layout vertical
+    flex-direction: column;            // Direction verticale (header, main, footer)
+    min-height: 100vh;                 // Hauteur minimale = hauteur de la fenêtre
+    max-width: 100%;                   // Largeur maximale = largeur de la fenêtre
+    margin: 0 auto;                    // Centrage horizontal
 }
 
+// Zone de contenu principal (entre header et footer)
 main {
-    flex-grow: 1;
-    padding-top: 20px;
-    padding-bottom: 0;
+    flex-grow: 1;                      // Prend tout l'espace disponible
+    padding-top: 20px;                 // Espacement avec le header
+    padding-bottom: 0;                 // Pas d'espacement avec le footer
 }
 
+// Footer toujours en bas de page
 footer {
-    margin-top: auto;
+    margin-top: auto;                  // Pousse le footer vers le bas
 }
+
+// ========== STYLES GÉNÉRIQUES ==========
+
+/* Styles par défaut pour tous les liens */
 
 /* Liens */
 a {
-    font-weight: 500;
-    color: inherit;
-    text-decoration: none;
+    font-weight: 500;                  // Liens légèrement plus gras
+    color: inherit;                    // Hérite de la couleur du parent
+    text-decoration: none;             // Pas de soulignement par défaut
 }
 
+/* Effet hover sur les liens */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline;         // Soulignement au survol
 }
+
+// ========== TYPOGRAPHIE ==========
+
+/* Style par défaut pour les titres h1 */
 
 /* Titres */
 h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 2.5rem;                 // Taille importante (40px)
+    line-height: 1.2;                  // Interligne serré pour les gros titres
 }

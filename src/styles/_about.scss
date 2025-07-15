@@ -4,20 +4,23 @@
 // ==============================
 
 .about {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    // ========== CONTENEUR PRINCIPAL ==========
+    max-width: 1200px;                  
+    margin: 0 auto;                     
+    padding: 20px;                      
 
+    // ========== CONTENEUR DES ÉLÉMENTS COLLAPSE ==========
     &__grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 30px 100px;
-        margin: 0 auto;
+        display: flex;                  // Flexbox pour alignement vertical
+        flex-direction: column;         // Direction verticale (collapses empilés)
+        gap: 20px;                      
+        padding: 30px 100px;            
+        margin: 0 auto;                
    
-
-         @media (max-width: $breakpoint-tablet) {
-            padding: 0;
+        // ========== RESPONSIVE TABLETTE ==========
+        @media (max-width: $breakpoint-mobile) {
+            padding: 0;                 // Suppression du padding latéral sur tablette
+                                       // pour utiliser toute la largeur disponible
         }
     }
 }

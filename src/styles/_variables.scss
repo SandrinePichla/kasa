@@ -3,33 +3,40 @@
 //   Fichier : _variables.scss
 // ==============================
 
+// ========== COULEURS ==========
+
+// Couleur principale de l'application (rouge Kasa)
 $primary-color: #FF6060;      // Rouge Kasa
 
-$background-white: #FFFFFF;  // Fond blanc
-$background-light: #F6F6F6;   // Fond gris clair
-$background-dark: #000000;    // Fond noir footer
+// Couleurs de fonds
+$background-white: #FFFFFF;  // Fond blanc par défaut
+$background-light: #F6F6F6;   // Fond gris clair (utilisé pour les grilles, conteneurs)
+$background-dark: #000000;    // Fond noir (footer uniquement)
 
-
+// Couleurs de texte
 $text-default: #000000;       // Texte principal, nav
 $text-light: #FFFFFF;         // Texte clair (h3, h4, footer)
 
-$star-color-default: #E3E3E3; // Couleur des étoiles par défaut
-$star-color-filled: #FF6060; // Couleur des étoiles remplies
+// Couleurs spécifiques aux composants
+$star-color-default: #E3E3E3; // Couleur des étoiles vides (rating)
+$star-color-filled: #FF6060; // Couleur des étoiles pleines (rating)
+$arrow-color: #FFFFFF; // Couleur des flèches de navigation (slideshow)
+$counter-color: #FFFFFF; // Couleur du compteur d'images (slideshow)'
 
-$arrow-color: #FFFFFF; // Couleur des flèches du slideshow
+// ========== TYPOGRAPHIE ==========
 
-$counter-color: #FFFFFF; // Couleur du compteur du slideshow
-
-
+// Police principale de l'application
 $font-family-base: 'Montserrat', sans-serif;
 
+// ========== LAYOUT ==========
 
-// Largeurs de conteneur
-$container-desktop: 1440px;
-$container-mobile: 375px;
+// Largeurs maximales des conteneurs
+$container-desktop: 1440px;  // Largeur max pour desktop
+$container-mobile: 375px;  // Largeur de référence mobile
 
-// Breakpoints
-$breakpoint-desktop: 1440px;
-$breakpoint-tablet: 1024px;
-$breakpoint-mobile: 768px;
-$breakpoint-small: 375px;
+// ========== BREAKPOINTS ==========
+// Points de rupture pour le responsive design
+$breakpoint-desktop: 1440px;  // Écrans larges
+$breakpoint-tablet: 1024px;  // Tablettes
+$breakpoint-mobile: 768px;  // Mobile et tablettes petites
+$breakpoint-small: 375px;  // Petits mobiles

@@ -4,25 +4,29 @@
 // ==============================
 
 .home {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    // ========== CONTENEUR PRINCIPAL ==========
+    max-width: 1200px;                  
+    margin: 0 auto;                     // Centrage horizontal
+    padding: 20px;                      // Padding uniforme autour du contenu
 
+    // ========== GRILLE DES CARTES ==========
     &__grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        background-color: $background-light;
-        padding: 50px;
-        border-radius: 25px;
+        display: grid;                          // Utilisation de CSS Grid
+        grid-template-columns: repeat(3, 1fr);  // 3 colonnes égales sur desktop
+        gap: 30px;                              
+        background-color: $background-light;    // Fond gris clair
+        padding: 50px;                          
+        border-radius: 25px;                    
 
+        // ========== RESPONSIVE MOBILE ==========
         @media (max-width: $breakpoint-mobile) {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr;  // 1 seule colonne en mobile
 
-            // 👇 Supprime le fond grisé et les bordures en mobile
-            background-color: transparent;
-            padding: 0;
-            border-radius: 0;
+            // Suppression du style "container" en mobile
+            // pour un affichage plus naturel            
+            background-color: transparent; // Suppression du fond gris
+            padding: 0;                   // Suppression du padding
+            border-radius: 0;             // Suppression des coins arrondis
         }
     }
 }

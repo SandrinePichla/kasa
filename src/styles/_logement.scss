@@ -4,146 +4,160 @@
 // ==============================
 
 .logement {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 20px;
+    // ========== CONTENEUR PRINCIPAL ==========
+    max-width: 1240px;                  
+    margin: 0 auto;                     
+    padding: 20px;                      
 
+    // ========== HEADER DE LA PAGE (infos + host/rating) ==========
     &__header {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 20px;
+        display: flex;                  // Flexbox pour alignement horizontal
+        justify-content: space-between; // Infos à gauche, host/rating à droite
+        flex-wrap: wrap;                // Permet le passage à la ligne si nécessaire
+        margin-top: 20px;               
 
         @media screen and (max-width: $breakpoint-mobile) {
-            flex-direction: column;
-            gap: 10px;
+            flex-direction: column;     // Passage en colonne sur mobile
+            gap: 10px;                  
         }
     }
 
+    // ========== SECTION INFORMATIONS (titre, location, tags) ==========
     &__info {
-        flex: 1;
+        flex: 1;                        // Prend l'espace disponible à gauche
     }
 
+    // ========== TITRE DU LOGEMENT ==========
     &__title {
-        max-width: 800px;
-        color: $primary-color;
-        font-size: 36px;
-        font-weight: 500;
-        margin: 0;
+        max-width: 800px;               
+        color: $primary-color;          
+        font-size: 36px;                
+        font-weight: 500;               
+        margin: 0;                     
 
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 18px;
+            font-size: 18px;            // Taille réduite sur mobile
         }
     }
 
+    // ========== LOCALISATION ==========
     &__location {
-        margin-top: 5px;
-        color: $text-default;
-        font-size: 18px;
-        font-weight: 500;
+        margin-top: 5px;                
+        color: $text-default;           
+        font-size: 18px;                
+        font-weight: 500;               
 
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 14px;
+            font-size: 14px;            // Taille réduite sur mobile
         }
     }
 
+    // ========== CONTENEUR DES TAGS ==========
     &__tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
+        display: flex;                  // Flexbox pour alignement horizontal
+        flex-wrap: wrap;                // Permet le passage à la ligne
+        gap: 10px;                      // Espacement entre les tags
+        margin-top: 10px;               // Espacement avec la localisation
     }
 
+    // ========== TAG INDIVIDUEL ==========
     &__tag {
-        background-color: $primary-color;
-        padding: 5px 15px;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: 700;
-        color: $text-light;
-        list-style: none;
+        background-color: $primary-color; // Fond rouge Kasa
+        padding: 5px 15px;              // Padding horizontal plus important
+        border-radius: 10px;            // Coins arrondis
+        font-size: 14px;                // Taille de police petite
+        font-weight: 700;               // Poids important (gras)
+        color: $text-light;             // Texte blanc
+        list-style: none;               // Suppression des puces si utilisé dans une liste
 
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 10px;
-            padding: 3px 8px;
-            border-radius: 5px;
+            font-size: 10px;            // Taille encore plus petite sur mobile
+            padding: 3px 8px;            // Padding réduit
+            border-radius: 5px;          // Coins moins arrondis
         }
     }
-
+    
+    // ========== SECTION HOST ET RATING ==========
     &__host-rating {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin-top: 20px;
-        gap: 30px; // Gap plus grand entre host et rating
+        display: flex;                  // Flexbox pour alignement
+        flex-direction: column;         // Direction verticale (host au-dessus, rating en dessous)
+        align-items: flex-end;          // Alignement à droite
+        margin-top: 20px;               // Espacement avec les éléments au-dessus
+        gap: 30px;                      // Espacement important entre host et rating
 
         @media screen and (max-width: $breakpoint-mobile) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 0;
-            gap: 0;
+            flex-direction: row;        // Direction horizontale sur mobile
+            justify-content: space-between; // Répartition sur toute la largeur
+            align-items: center;        // Alignement vertical centré
+            width: 100%;                // Pleine largeur
+            margin-top: 0;              // Pas d'espacement supplémentaire
+            gap: 0;                     // Pas d'espacement (justify-content s'en charge)
         }
     }
 
+    // ========== SECTION HOST ==========
     &__host {
-        display: flex;
-        align-items: center;
-        gap: 15px;
+        display: flex;                  // Flexbox pour alignement horizontal
+        align-items: center;            // Alignement vertical centré
+        gap: 15px;                      // Espacement entre nom et photo
 
         @media screen and (max-width: $breakpoint-mobile) {
-            order: 2; // Place l'host à droite
-            gap: 10px;
+            order: 2;                   // Place l'host à droite sur mobile
+            gap: 10px;                  // Espacement réduit
         }
     }
 
+    // ========== NOM DU HOST ==========
     &__host-name {
-        font-size: 18px;
-        font-weight: 500;
-        color: $primary-color;
-        text-align: right;
-        display: flex;
-        flex-direction: column;
-        line-height: 1.2;
+        font-size: 18px;                // Taille de police moyenne
+        font-weight: 500;               // Poids moyen
+        color: $primary-color;          // Couleur rouge Kasa
+        text-align: right;              // Alignement à droite
+        display: flex;                  // Flexbox pour contrôler l'alignement
+        flex-direction: column;         // Direction verticale (prénom sur nom)
+        line-height: 1.2;               // Interligne serré
 
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 12px;
+            font-size: 12px;            // Taille réduite sur mobile
         }
-
     }
 
+    // ========== PRÉNOM ET NOM (éléments séparés) ==========
     &__host-firstname,
     &__host-lastname {
-        display: block;
+        display: block;                 // Affichage en bloc pour passage à la ligne
     }
 
+    // ========== PHOTO DU HOST ==========
     &__host-picture {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
+        width: 50px;                    // Largeur fixe
+        height: 50px;                   // Hauteur fixe (carré)
+        border-radius: 50%;             // Forme circulaire
+        object-fit: cover;              // Recadrage de l'image sans déformation
     }
 
-    // Styles pour le composant Rating en mobile
+    // ========== MODIFICATION DU COMPOSANT RATING EN MOBILE ==========
     .rating {
         @media screen and (max-width: $breakpoint-mobile) {
-            order: 1; // Place les étoiles à gauche
+            order: 1;                   // Place les étoiles à gauche sur mobile
         }
     }
 
+    // ========== SECTION COLLAPSES (Description et Équipements) ==========
     &__collapses {
-        display: flex;
-        gap: 20px;
-        margin-top: 20px;
+        display: flex;                  // Flexbox pour alignement horizontal
+        gap: 20px;                      // Espacement entre les collapses
+        margin-top: 20px;               // Espacement avec la section au-dessus
 
+        // Chaque collapse prend la moitié de la largeur
         & > div {
-            flex: 1;
+            flex: 1;                    // Répartition égale de l'espace
         }
+
         @media screen and (max-width: $breakpoint-mobile) {
-            flex-direction: column;
-             margin-top: 10px;
-              gap: 10px;
+            flex-direction: column;     // Passage en colonne sur mobile
+            margin-top: 10px;           // Espacement réduit
+            gap: 10px;                  // Espacement réduit entre les collapses
         }
     }
 }

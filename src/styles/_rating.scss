@@ -4,19 +4,23 @@
 // ==============================
 
 .rating {
-    display: flex;
-    gap: 5px;
+// ========== CONTENEUR PRINCIPAL ==========
+    display: flex;                      // Flexbox pour aligner les étoiles horizontalement
+    gap: 5px;                           // Espacement entre les étoiles
 
+    // ========== ÉTOILE INDIVIDUELLE ==========
     &__star {
-        font-size: 24px;
-        color:$star-color-default;
+        font-size: 24px;                // Taille des étoiles sur desktop
+        color: $star-color-default;     // Couleur par défaut (gris clair)
 
+        // ========== RESPONSIVE MOBILE ==========
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 16px;
+            font-size: 16px;            // Taille réduite sur mobile
         }
 
+        // ========== MODIFICATEUR ÉTOILE REMPLIE ==========
         &--filled {
-            color: $star-color-filled;
+            color: $star-color-filled;  // Couleur rouge Kasa pour les étoiles pleines
         }
     }
 }
