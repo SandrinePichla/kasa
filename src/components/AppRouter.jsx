@@ -14,9 +14,11 @@ import NotFound from '../pages/NotFound';
  * Configuration du routage de l'application
  * Définit toutes les routes disponibles
  */
+
 function AppRouter() {
     return (
         <Routes>
+
             {/* Page d'accueil - route par défaut */}
             <Route path="/" element={<Home />}/>
 
@@ -28,6 +30,7 @@ function AppRouter() {
 
             {/* Page 404 - attrape toutes les routes non définies */}
             <Route path="*" element={<NotFound />}/>
+
         </Routes>
     );
 }

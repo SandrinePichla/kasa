@@ -22,6 +22,7 @@ function Card({id, title, cover}) {
 
              {/* Titre du logement */}
             <div className="card__title">{title}</div>
+            
         </Link>
     );
 }

@@ -14,6 +14,7 @@ import Card from '../components/Card';
 function Home() {
     return (
         <main className="home">
+            
             {/* Passage des props avec des valeurs */}
             <Banner 
                 image={bannerHomeImg} 

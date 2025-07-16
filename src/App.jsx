@@ -21,13 +21,15 @@ function App() {
             <Header/> 
             
             <main>
-                {/* Contenu principal - change selon la route */}
-                <AppRouter/> {/**  J'appelles mon composant AppRouter ici **/
-                }
-                </main>
+
+                {/**  J'appelle mon composant AppRouter ici **/                }
+                <AppRouter/> 
+
+            </main>
                 
             {/* Footer - affiché sur toutes les pages */}
             <Footer/>
+            
         </div>
 
     );

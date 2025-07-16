@@ -9,7 +9,7 @@ import './styles/main.scss'
 import App from './App.jsx'
 
 
-// Point d'entrée principal - Crée une racine React dans l'ID 'root' et affiche le contenu
+// Crée une racine React dans l'ID 'root' et y affiche le contenu
 createRoot(document.getElementById('root')).render(
     <StrictMode>
         <HashRouter>
