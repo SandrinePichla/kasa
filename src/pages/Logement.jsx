@@ -23,7 +23,7 @@ function Logement() {
 
     // Redirection vers 404 si le logement n'existe pas
     if (!logement) {
-        return <Navigate to="*"/>; /// Redirige vers la route 404
+        return <Navigate to="/404" replace/>; /// Redirige vers la route 404
     }
 
     /**

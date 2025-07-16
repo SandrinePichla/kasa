@@ -19,14 +19,15 @@ function Collapse({title, content, variant }) {
         //Si variant existe, on ajoute "collapse--variant"
         <div className={`collapse${variant ? ` collapse--${variant}` : ''}`}>
             
-             {/* header cliquable pour inverser le State */}
-            <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
+             {/* header  */}
+            <div className="collapse__header" >
                 
                 <h2 className="collapse__title">{title}</h2>
 
-                 {/* Icône chevron qui pivote selon l'état */}
+                 {/* Icône chevron cliquable pour inverser le State + qui pivote selon l'état */}
                 <FaChevronUp
                      className={`collapse__chevron${isOpen ? ' collapse__chevron--rotated' : ''}`}
+                     onClick={() => setIsOpen(!isOpen)}
                 />
             </div>
 

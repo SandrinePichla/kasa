@@ -14,8 +14,7 @@
     &__header {
         display: flex;                  // Flexbox pour aligner titre et chevron
         justify-content: space-between; // Titre à gauche, chevron à droite
-        align-items: center;            // Alignement vertical centré
-        cursor: pointer;                
+        align-items: center;            // Alignement vertical centré                       
         padding: 15px;                  
         background-color: $primary-color; 
         color: $text-light;             
@@ -48,6 +47,7 @@
     // ========== CHEVRON (FLÈCHE) ==========
     &__chevron {
         transition: transform 0.1s ease; // Animation de rotation rapide
+        cursor: pointer;  //curseur visible seulement sur le chevron
 
         // Modificateur pour la rotation (collapse ouvert)
         &--rotated {

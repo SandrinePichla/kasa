@@ -16,12 +16,13 @@ import AppRouter from './components/AppRouter'; // On importe le composant AppRo
 function App() {
     return (
         <div className="App">
+
             {/* Header avec navigation - affiché sur toutes les pages */}
             <Header/> 
             
             <main>
                 {/* Contenu principal - change selon la route */}
-                <AppRouter/> {/**  J'appelles mon composant AppRouterici **/
+                <AppRouter/> {/**  J'appelles mon composant AppRouter ici **/
                 }
                 </main>
                 
