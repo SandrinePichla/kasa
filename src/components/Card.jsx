@@ -1,7 +1,7 @@
 // ===============================================
 // CARD.JSX - Composant carte pour les logements
 // ===============================================
-
+import React from 'react';
 import {Link} from 'react-router-dom';
 
 /**

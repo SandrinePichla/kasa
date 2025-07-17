@@ -32,13 +32,13 @@ function Logement() {
      * @returns {Object} - {firstName, lastName}
      */
     const formatHostName = (name) => {
-        const names = name.split(' ');
-        if (names.length >= 2) {
-            const firstName = names[0];
-            const lastName = names.slice(1).join(' '); // Gère les noms multiples
-            return {firstName, lastName};
+        const names = name.split(' '); //La méthode split(' ') découpe la chaîne à chaque espace, et crée un tableau de mots
+        if (names.length >= 2) { // Si le nom contient plusieurs mots                       
+            const firstName = names[0]; // Prend le premier mot comme prénom 
+            const lastName = names.slice(1).join(' '); // et le reste comme nom de famille slice(1) prend tous les mots sauf le premier join(' ') les recompose en une chaîne avec des espaces
+            return {firstName, lastName}; //On renvoie un objet avec le prénom et le nom 
         }
-        return {firstName: name, lastName: ''};
+        return {firstName: name, lastName: ''}; //Sinon, si le nom complet ne contient qu’un seul mot On considère que tout est le prénom, Le nom de famille reste vide ("")
     };
 
     // Extraction du prénom et nom de l'hôte
@@ -46,12 +46,14 @@ function Logement() {
 
     return (
         <main className="logement">
+
             {/* Carrousel d'images */}
             <Slideshow pictures={logement.pictures}/>
 
             {/* En-tête avec infos principales */}
             <section className="logement__header">
                 <div className="logement__info">
+
                     {/* Titre du logement */}
                     <h1 className="logement__title">{logement.title}</h1>
 
@@ -68,12 +70,14 @@ function Logement() {
 
                 {/* Section hôte et notation */}
                 <div className="logement__host-rating">
+
                     {/* Informations de l'hôte */}
                     <div className="logement__host">
                         <div className="logement__host-name">
                             <span className="logement__host-firstname">{firstName}</span>
                             <span className="logement__host-lastname">{lastName}</span>
                         </div>
+
                         <img
                             src={logement.host.picture}
                             alt={logement.host.name}
@@ -82,6 +86,7 @@ function Logement() {
 
                     {/* Notation en étoiles */}
                     <Rating rating={logement.rating}/>
+                    
                 </div>
             </section>
 

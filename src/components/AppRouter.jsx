@@ -3,7 +3,6 @@
 // ===============================================
 
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -28,7 +27,7 @@ function AppRouter() {
             {/* Page de détail d'un logement - :id est un paramètre dynamique */}           
             <Route path="/logement/:id" element={<Logement />}/>
 
-            {/* Page 404 - attrape toutes les routes non définies */}
+            {/* Page 404 - attrape toutes les routes non définies ("catch-all")*/}
             <Route path="*" element={<NotFound />}/>
 
         </Routes>

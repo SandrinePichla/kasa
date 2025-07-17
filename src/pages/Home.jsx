@@ -23,9 +23,9 @@ function Home() {
 
             {/* Grille des logements */}
             <div className="home__grid">
-                {
-                    // Parcourt tous les logements et génère une Card pour chacun
-                    logements.map((logement) => (
+                
+                {/* Parcourt tous les logements et génère une Card pour chacun*/}
+                {logements.map((logement) => (
                         <Card
                             key={logement.id} // Clé unique pour React
                             id={logement.id} // Id pour le composant

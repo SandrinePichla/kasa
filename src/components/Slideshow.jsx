@@ -37,7 +37,7 @@ function Slideshow({pictures}) {
                 className="slideshow__image"
             /> 
                 
-                {/* Contrôles affichés seulement s'il y a plusieurs images */}
+                {/* Flèches et compteur affichés seulement s'il y a plusieurs images */}
                 {pictures.length > 1 && (
                     <>   
                         {/* Bouton précédent */}                 
