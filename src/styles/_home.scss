@@ -1,25 +1,32 @@
 // ==============================
-//   STYLES - Page d'accueil
+//   STYLES - Page Home
 //   Fichier : _home.scss
 // ==============================
 
-.home_container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  
-  // Exemple : titre principal
-  h1 {
-    font-size: 2rem;
-    color: $secondary-color; // si tu as une variable définie
-    margin-bottom: 1rem;
-  }
+.home {
+    // ========== CONTENEUR PRINCIPAL ==========
+    max-width: 1200px;                  
+    margin: 0 auto;                     // Centrage horizontal
+    padding: 20px;                      // Padding uniforme autour du contenu
 
-  // Exemple : section des logements
-  .home_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 30px;
-  }
+    // ========== GRILLE DES CARTES ==========
+    &__grid {
+        display: grid;                          // Utilisation de CSS Grid
+        grid-template-columns: repeat(3, 1fr);  // 3 colonnes égales sur desktop
+        gap: 30px;                              
+        background-color: $background-light;    // Fond gris clair
+        padding: 50px;                          
+        border-radius: 25px;                    
+
+        // ========== RESPONSIVE MOBILE ==========
+        @media (max-width: $breakpoint-mobile) {
+            grid-template-columns: 1fr;  // 1 seule colonne en mobile
+
+            // Suppression du style "container" en mobile
+            // pour un affichage plus naturel            
+            background-color: transparent; // Suppression du fond gris
+            padding: 0;                   // Suppression du padding
+            border-radius: 0;             // Suppression des coins arrondis
+        }
+    }
 }
-

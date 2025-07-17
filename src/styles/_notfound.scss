@@ -1,6 +1,71 @@
-// Exemple : titre principal
-  h1 {
-    font-size: 2rem;
-    color: $secondary-color; // si tu as une variable définie
-    margin-bottom: 1rem;
-  }
+// ==============================
+//   STYLES - Page Notfound
+//   Fichier : _notfound.scss
+// ==============================
+
+.not-found {
+   // ========== CONTENEUR PRINCIPAL ==========
+    margin: 0 40px;                     // Marge horizontale pour éviter de coller aux bords
+    display: flex;                      // Flexbox pour centrage vertical
+    flex-direction: column;             // Direction verticale (titre, texte, lien)
+    align-items: center;                // Centrage horizontal de tous les éléments
+
+    // ========== TITRE 404 ==========
+    &__title {
+        font-size: 288px;               // Taille énorme pour l'impact visuel
+        color: $primary-color;          // Couleur rouge Kasa
+        font-weight: 700;               // Poids très gras
+        margin-bottom: 4rem;            // Espacement important en dessous
+        margin-top: 5rem;               // Espacement important au-dessus
+    }
+
+    // ========== TEXTE D'ERREUR ==========
+    &__text {
+        font-size: 36px;                // Taille importante mais lisible
+        color: $primary-color;          // Couleur rouge Kasa
+        font-weight: 500;               // Poids moyen
+        margin-bottom: 5rem;            // Espacement important en dessous
+    }
+
+    // ========== LIEN DE RETOUR ==========
+    &__link {
+        display: inline-block;          // Permet d'appliquer marges et padding
+        margin-bottom: 2rem;            // Espacement en dessous
+        font-size: 18px;                // Taille de police moyenne
+        font-weight: 500;               // Poids moyen
+        color: $text-default;           // Couleur noire (contraste avec le rouge)
+        text-decoration: underline;     // Soulignement pour indiquer que c'est un lien
+
+        // Effet hover : suppression du soulignement
+        &:hover {
+            text-decoration: none;      // Pas de soulignement au survol
+        }
+    }
+    
+    // ========== RESPONSIVE MOBILE ==========
+    @media (max-width: $breakpoint-mobile) {   
+        margin: 0 80px;                 // Marge horizontale plus importante sur mobile
+        text-align: center;             // Centrage du texte (au cas où)
+
+        // Titre 404 plus petit mais toujours imposant
+        &__title {
+            font-size: 96px;            // Taille réduite mais toujours importante
+            font-weight: 700;           // Poids conservé
+            margin: 5rem 0 5rem;        // Marge top et bottom identiques
+        }
+
+        // Texte d'erreur plus petit
+        &__text {
+            font-size: 18px;            // Taille réduite de moitié
+            font-weight: 500;           // Poids conservé
+            margin: 0 0 8rem;           // Marge bottom plus importante
+        }
+
+        // Lien plus petit
+        &__link {
+            font-size: 14px;            // Taille réduite
+            font-weight: 500;           // Poids conservé
+            margin-bottom: 2rem;        // Marge conservée
+        }
+    }
+}

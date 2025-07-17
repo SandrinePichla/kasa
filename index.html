@@ -1,13 +1,30 @@
 <!doctype html>
+<!-- Élément racine HTML avec la langue française définie -->
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kasa</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8"/>
+
+         <!-- Lien vers l'icône du site (favicon) qui s'affiche dans l'onglet du navigateur -->
+        <link rel="icon" href="/favicon.ico" />
+
+        <!-- Configuration de la vue pour un affichage responsive sur tous les appareils -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Lien vers les font Google Fonts (Montserrat)  -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Titre de la page -->
+        <title>Kasa</title>
+    </head>
+    <body>
+
+        <!-- Conteneur principal vide où React va monter l’application -->
+        <div id="root"></div>
+
+        <!--  importe le fichier JavaScript principal qui démarre l'application React. -->
+        <!--  type="module" indique que ce fichier JS utilise les modules ES, permettant des imports/export modernes.-->
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
 </html>

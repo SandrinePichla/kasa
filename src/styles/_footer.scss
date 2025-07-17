@@ -1,19 +1,43 @@
+// ==============================
+//   STYLES - Composant Footer
+//   Fichier : _footer.scss
+// ==============================
+
 .footer {
-  background-color: black;
-  padding: 40px 0;
-  text-align: center;
-  color: $text-secondary-color;
+   // ========== CONTENEUR PRINCIPAL ==========
+    background-color: $background-dark;  
+    padding: 40px 0;                     
+    text-align: center;                  // Contenu centré
+    color: $text-light;                 
 
-  &__logo {
-    max-width: 122px;
-    max-height: 39.44px;
-    margin-bottom: 20px;
-    
-  }
+    // ========== LOGO ==========
+    &__logo {
+        max-width: 122px;                // Largeur maximale du logo
+        max-height: 39.44px;             // Hauteur maximale du logo
+        margin-top: 40px;               
+        margin-bottom: 20px;     
+    }
 
-  &__text {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 143%;
-  }
+    // ========== TEXTE COPYRIGHT ==========
+    &__text {
+        font-size: 24px;                 
+        font-weight: 500;                     
+    }
+
+    // ========== RESPONSIVE MOBILE ==========
+    @media (max-width: $breakpoint-mobile) {
+        
+        // Texte plus petit en mobile
+        &__text {
+            font-size: 12px;              
+        }
+
+        // Logo avec plus d'espacement en mobile
+        &__logo {
+            margin-top: 50px;            
+            margin-bottom: 50px;         
+            // Les dimensions max-width et max-height sont conservées
+        }
+
+    }
 }

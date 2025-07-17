@@ -1,0 +1,26 @@
+// ==============================
+//   STYLES - Page About
+//   Fichier : _about.scss
+// ==============================
+
+.about {
+    // ========== CONTENEUR PRINCIPAL ==========
+    max-width: 1200px;                  
+    margin: 0 auto;                     
+    padding: 20px;                      
+
+    // ========== CONTENEUR DES ÉLÉMENTS COLLAPSE ==========
+    &__grid {
+        display: flex;                  // Flexbox pour alignement vertical
+        flex-direction: column;         // Direction verticale (collapses empilés)
+        gap: 20px;                      
+        padding: 30px 100px;            
+        margin: 0 auto;                
+   
+        // ========== RESPONSIVE TABLETTE ==========
+        @media (max-width: $breakpoint-mobile) {
+            padding: 0;                 // Suppression du padding latéral sur tablette
+                                       // pour utiliser toute la largeur disponible
+        }
+    }
+}

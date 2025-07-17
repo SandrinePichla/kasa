@@ -1,30 +1,51 @@
+// ==============================
+//   STYLES - Composant Banner
+//   Fichier : _banner.scss
+// ==============================
+
 .banner {
-  width: 100%;
-  height: 223px;
-  border-radius: 25px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
+    // ========== CONTENEUR PRINCIPAL ==========
+    width: 100%;                        
+    height: 223px;                      
+    border-radius: 25px;                
+    background-size: cover;             // Image couvre tout le conteneur
+    background-position: center;        // Image centrée
+    position: relative;                 // Pour positionner le texte et le masque
+    display: flex;                      // Flexbox pour centrer le texte
+    align-items: center;                // Centrage vertical du texte
+    justify-content: center;            // Centrage horizontal du texte
+    margin-bottom: 2rem;                
 
-  &__text {
-    color: white;
-    font-size: 48px;
-    font-weight: 700;
-    z-index: 1;
-    text-align: center;
-    padding: 0 1rem;
-  }
+    // ========== TEXTE DU BANNER ==========
+    &__text {
+        color: $text-light;             
+        font-size: 48px;                
+        font-weight: 700;               
+        z-index: 1;                     // Au-dessus du masque sombre
+        text-align: center;             
+        padding: 0 1rem;                
+    }
 
-  // Masque assombri
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 25px;
-  }
+    // ========== MASQUE SOMBRE ==========    
+    &::after {
+        content: "";                    // Contenu vide requis pour les pseudo-éléments
+        position: absolute;             // Position absolue par rapport au banner
+        top: 0;                         // Colle au haut
+        left: 0;                        // Colle à gauche
+        right: 0;                       // Colle à droite
+        bottom: 0;                      // Colle en bas
+        background-color: rgba(0, 0, 0, 0.3); // Noir semi-transparent (30% d'opacité)
+        border-radius: 25px;            // Coins arrondis identiques au conteneur
+    }
+
+    // ========== RESPONSIVE MOBILE ==========
+    @media (max-width: $breakpoint-mobile) {
+        height: 125px;                  // Hauteur réduite pour mobile
+
+        &__text {
+            text-align: left;           // Alignement à gauche sur mobile
+            padding-left: 20px;         // Padding spécifique à gauche
+            font-size: 24px;            // Taille réduite de moitié            
+        }
+    }
 }

@@ -1,24 +1,42 @@
+// ===============================================
+// HOME.JSX - Page d'accueil
+// ===============================================
+
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logements from '../data/logements.json';
 import Banner from '../components/Banner';
-import bannerImg from '../assets/banner.png'; 
+import bannerHomeImg from '../assets/banner_home.png';
+import Card from '../components/Card';
 
-
+/**
+ * Page d'accueil - Affiche tous les logements disponibles
+ */
 function Home() {
-  return (
-    <main className="home_container">
-      <Banner image={bannerImg} text="Chez vous, partout et ailleurs" />
-       <div className="home_grid">
-        {logements.map((logement) => (
-          <Link to={`/logement/${logement.id}`} key={logement.id} className="card">
-            <img src={logement.cover} alt={logement.title} className="card__img" />
-            <h2 className="card__title">{logement.title}</h2>
-          </Link>
-        ))}
-      </div>
-    </main>
-  );
+    return (
+        <main className="home">
+            
+            {/* Passage des props avec des valeurs */}
+            <Banner 
+                image={bannerHomeImg} 
+                text="Chez vous, partout et ailleurs"
+            />
+
+            {/* Grille des logements */}
+            <div className="home__grid">
+                
+                {/* Parcourt tous les logements et génère une Card pour chacun*/}
+                {logements.map((logement) => (
+                        <Card
+                            key={logement.id} // Clé unique pour React
+                            id={logement.id} // Id pour le composant
+                            title={logement.title}
+                            cover={logement.cover}
+                        />
+                    ))
+                }
+            </div>
+        </main>
+    );
 }
 
 export default Home;

@@ -1,0 +1,104 @@
+// ==============================
+//   STYLES - Composant Collapse
+//   Fichier : _collapse.scss
+// ==============================
+
+.collapse {
+     // ========== CONTENEUR PRINCIPAL ==========
+    border-radius: 5px;                 
+    background-color: $background-white; 
+    margin: 10px 0;                     
+    overflow: hidden;                   // Cache les débordements lors de l'animation
+
+    // ========== HEADER CLIQUABLE ==========
+    &__header {
+        display: flex;                  // Flexbox pour aligner titre et chevron
+        justify-content: space-between; // Titre à gauche, chevron à droite
+        align-items: center;            // Alignement vertical centré                       
+        padding: 15px;                  
+        background-color: $primary-color; 
+        color: $text-light;             
+    }
+
+    // ========== TITRE DU COLLAPSE ==========
+    &__title {
+        font-weight: 700;               
+        margin: 0;                      
+    }
+
+    // ========== TEXTE DU CONTENU ==========
+    &__text {
+        font-size: 17px;                
+        font-weight: 500;               
+        margin: 0;                      
+    }
+
+// ========== STYLES POUR LES LISTES ==========
+    ul {
+        list-style: none;               // Suppression des puces
+        padding-left: 0;               
+        margin: 0;                      
+    }
+
+    li {
+        margin-bottom: 5px;             
+    }
+
+    // ========== CHEVRON (FLÈCHE) ==========
+    &__chevron {
+        transition: transform 0.1s ease; // Animation de rotation rapide
+        cursor: pointer;  //curseur visible seulement sur le chevron
+
+        // Modificateur pour la rotation (collapse ouvert)
+        &--rotated {
+            transform: rotate(180deg);  // Rotation de 180° (flèche vers le haut)
+        }
+    }
+
+    // ========== CONTENU DU COLLAPSE ==========
+    &__content {
+        max-height: 0;                  // Hauteur nulle par défaut (fermé)
+        overflow: hidden;               // Cache le contenu qui déborde
+        transition: max-height 0.1s ease; // Animation d'ouverture/fermeture
+        background: $text-light;        
+        padding: 0 15px;                
+
+    // Modificateur pour l'état ouvert
+        &--open {
+            max-height: 500px;          // Hauteur maximale pour l'animation
+            padding: 15px;              // Padding complet quand ouvert
+        }
+    }
+
+    // ========== RESPONSIVE MOBILE ==========
+    @media (max-width: $breakpoint-mobile) {
+        
+        // Titre plus petit sur mobile
+        &__title {
+            font-size: 12px;                 
+            margin: 0;                 
+        }
+
+        // Texte plus petit sur mobile
+        &__text {
+            font-size: 12px;               
+            margin: 0;                
+        }
+    }
+}
+
+// ========== MODIFICATEURS SPÉCIFIQUES ==========
+
+// Collapse sur la page About
+.collapse--about {
+    .collapse__title {
+        font-size: 24px;       
+    }
+}
+
+// Collapse sur la page Logement
+.collapse--logement {
+    .collapse__title {
+        font-size: 18px;        
+    }
+}
