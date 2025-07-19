@@ -16,7 +16,7 @@ function About() {
             {/* Bannière sans texte */}
             <Banner image={bannerAboutImg}/>
 
-            {/* Grille des sections avec accordéons */}
+            {/* Grille des sections avec menu déroulant */}
             <div className="about__grid">
                 {/* Section Fiabilité */}
                 <Collapse
