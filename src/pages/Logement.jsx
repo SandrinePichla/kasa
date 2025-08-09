@@ -3,18 +3,18 @@
 // ===============================================
 
 import {useParams} from 'react-router-dom';
-import {Navigate} from 'react-router-dom';
+import {Navigate} from 'react-router-dom'; 
 import Slideshow from '../components/Slideshow';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
-import logements from '../data/logements.json'; // Ton fichier JSON
+import logements from '../data/logements.json'; // Import des données JSON
 
 /**
  * Page de détail d'un logement spécifique
  * Récupère l'ID depuis l'URL et affiche les informations correspondantes
  */
 function Logement() {
-    // Récupération de l'ID depuis les paramètres d'URL
+    // Récupération de l'ID depuis les paramètres d'URL (id) 
     const {id} = useParams();
 
      // Recherche du logement correspondant à l'ID
