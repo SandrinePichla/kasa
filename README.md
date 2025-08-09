@@ -83,6 +83,15 @@ L'application sera accessible à l'adresse : `http://localhost:5173`
 - `npm run build` - Compile l'application pour la production
 - `npm run preview` - Prévisualise la version de production
 
+## 📝 Deploiement sur GitHub Pages
+
+Pour déployer l'application sur GitHub Pages, il faut :
+- Créer une branche `gh-pages` dans votre repository
+- A partir de la branche `main`, branche de code source, déployer  le site sur GitHub Pages (gh-pages est la branche de déploiement → on y met uniquement les fichiers compilés),,en utilisant les commandes :
+`npm i -D gh-pages
+npm run build
+npx gh-pages -d dist` 
+
 ## 🌟 Fonctionnalités
 
 ### Pages principales

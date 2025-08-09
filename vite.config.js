@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/kasa/', // Important : le nom de votre repository
+  base: '/kasa/', // Important : le nom de mon repository
   build: {
     outDir: 'dist',
   },
