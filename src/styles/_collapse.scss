@@ -92,13 +92,20 @@
 // Collapse sur la page About
 .collapse--about {
     .collapse__title {
-        font-size: 24px;       
+        font-size: 24px;  
+        
+        @media (max-width: $breakpoint-mobile) {   
+          font-size: 13px;    
+    }
     }
 }
 
 // Collapse sur la page Logement
 .collapse--logement {
     .collapse__title {
-        font-size: 18px;        
+        font-size: 18px;
+        @media (max-width: $breakpoint-mobile) {   
+          font-size: 13px;    
+    }     
     }
 }

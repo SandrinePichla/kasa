@@ -1,16 +1,21 @@
-Kasa - Application de location immobilière
-📋 Description du projet
+# Kasa - Application de location immobilière
+
+## 📋 Description du projet
+
 Kasa est une application web de location d'appartements entre particuliers, développée en React. Ce projet fait partie de la formation OpenClassrooms et présente une interface moderne et responsive pour parcourir et consulter des annonces de logements.
-🚀 Technologies utilisées
 
-React - Bibliothèque JavaScript pour l'interface utilisateur
-Vite - Outil de build rapide pour le développement
-React Router - Gestion de la navigation entre les pages
-JavaScript ES6+ - Langage de programmation
-SCSS/Sass - Préprocesseur CSS pour une stylisation avancée
-JSON - Simulation de données backend
+## 🚀 Technologies utilisées
 
-📁 Architecture du projet
+- **React** - Bibliothèque JavaScript pour l'interface utilisateur
+- **Vite** - Outil de build rapide pour le développement
+- **React Router** - Gestion de la navigation entre les pages
+- **JSX** - Extension de JavaScript pour React
+- **SCSS/Sass** - Préprocesseur CSS pour une stylisation avancée
+- **JSON** - Simulation de données backend
+
+## 📁 Architecture du projet
+
+```
 src/
 ├── components/         # Composants réutilisables
 │   ├── AppRouter.jsx   # Configuration des routes
@@ -44,80 +49,89 @@ src/
 │   └── main.scss       # Fichier principal SCSS
 ├── App.jsx             # Composant racine
 └── main.jsx            # Point d'entrée de l'application
-⚡ Installation et lancement
-Prérequis
+```
 
-Node.js (version 14 ou supérieure)
-npm ou yarn
+## ⚡ Installation et lancement
 
-Installation
-bash# Cloner le repository
-git clone [URL_DU_REPOSITORY]
+### Prérequis
+- Node.js (version 14 ou supérieure)
+- npm ou yarn
+
+### Installation
+```bash
+# Cloner le repository
+git clone https://github.com/SandrinePichla/kasa.git
 
 # Accéder au dossier du projet
 cd kasa
 
 # Installer les dépendances
 npm install
-Lancement du projet
-bash# Démarrer le serveur de développement
+```
+
+### Lancement du projet
+```bash
+# Démarrer le serveur de développement
 npm run dev
-L'application sera accessible à l'adresse : http://localhost:5173
-🔧 Scripts disponibles
+```
 
-npm run dev - Lance le serveur de développement
-npm run build - Compile l'application pour la production
-npm run preview - Prévisualise la version de production
+L'application sera accessible à l'adresse : `http://localhost:5173`
 
-🌟 Fonctionnalités
-Pages principales
+## 🔧 Scripts disponibles
 
-Accueil : Affichage de la galerie de tous les logements
-Logement : Page de détail avec carrousel d'images, informations complètes
-À propos : Présentation des valeurs de l'entreprise
-404 : Page d'erreur pour les routes inexistantes
+- `npm run dev` - Lance le serveur de développement
+- `npm run build` - Compile l'application pour la production
+- `npm run preview` - Prévisualise la version de production
 
-Composants clés
+## 🌟 Fonctionnalités
 
-Navigation responsive avec React Router
-Carrousel d'images avec navigation par flèches
-Système de collapse pour les descriptions et équipements
-Notation par étoiles pour évaluer les logements
-Cards responsive pour l'affichage des logements
+### Pages principales
+- **Accueil** : Affichage de la galerie de tous les logements
+- **Logement** : Page de détail avec carrousel d'images, informations complètes
+- **À propos** : Présentation des valeurs de l'entreprise
+- **404** : Page d'erreur pour les routes inexistantes
 
-📊 Données
-Le backend est simulé via le fichier logements.json qui contient :
+### Composants clés
+- **Navigation responsive** avec React Router
+- **Carrousel d'images** avec navigation par flèches
+- **Système de collapse** pour les descriptions et équipements
+- **Notation par étoiles** pour évaluer les logements
+- **Cards responsive** pour l'affichage des logements
 
-Informations des logements (titre, localisation, prix, etc.)
-Galeries d'images
-Descriptions et équipements
-Informations sur les hôtes
-Système de notation
+## 📊 Données
 
-🎯 Compétences développées
+Le backend est simulé via le fichier `logements.json` qui contient :
+- Informations des logements (titre, localisation, prix, etc.)
+- Galeries d'images
+- Descriptions et équipements
+- Informations sur les hôtes
+- Système de notation
 
-Développement d'une application React complète
-Gestion du routing avec React Router
-Création de composants réutilisables
-Manipulation de données JSON
-Responsive design et SCSS moderne
-Architecture de projet structurée
-Utilisation de variables SCSS pour une cohérence visuelle
+## 🎯 Compétences développées
 
-📱 Responsive Design
+- Développement d'une application React complète
+- Gestion du routing avec React Router
+- Création de composants réutilisables
+- Manipulation de données JSON
+- Responsive design et SCSS moderne
+- Architecture de projet structurée
+- Utilisation de variables SCSS pour une cohérence visuelle
+
+## 📱 Responsive Design
+
 L'application est entièrement responsive et s'adapte aux différentes tailles d'écran :
+- Desktop (> 1024px)
+- Tablette (768px - 1024px)
+- Mobile (< 768px)
 
-Desktop (> 1024px)
-Tablette (768px - 1024px)
-Mobile (< 768px)
+## 🔗 Navigation
 
-🔗 Navigation
 La navigation se fait via React Router avec les routes suivantes :
+- `/` - Page d'accueil
+- `/logement/:id` - Page de détail d'un logement
+- `/about` - Page à propos
+- `*` - Page 404 pour toute route non définie
 
-/ - Page d'accueil
-/logement/:id - Page de détail d'un logement
-/about - Page à propos
-* - Page 404 pour toute route non définie
+---
 
-
-Projet réalisé dans le cadre de la formation OpenClassrooms - Développeur Web
+**Projet réalisé dans le cadre de la formation OpenClassrooms - Développeur Web**
