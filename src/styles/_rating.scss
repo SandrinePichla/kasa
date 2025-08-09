@@ -3,6 +3,7 @@
 //   Fichier : _rating.scss
 // ==============================
 
+@use './variables' as *;
 .rating {
 // ========== CONTENEUR PRINCIPAL ==========
     display: flex;                      // Flexbox pour aligner les étoiles horizontalement

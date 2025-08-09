@@ -2,7 +2,6 @@
 // HEADER.JSX - Composant d'en-tête avec navigation
 // ===============================================
 
-import React from 'react';
 import {NavLink} from 'react-router-dom';
 import logoRedImg from '../assets/logo_red.png';
 

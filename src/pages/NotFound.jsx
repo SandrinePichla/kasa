@@ -2,7 +2,6 @@
 // NOTFOUND.JSX - Page d'erreur 404
 // ===============================================
 
-import React from 'react';
 import {Link} from 'react-router-dom';
 
 /**

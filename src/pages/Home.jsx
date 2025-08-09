@@ -2,7 +2,6 @@
 // HOME.JSX - Page d'accueil
 // ===============================================
 
-import React from 'react';
 import logements from '../data/logements.json';
 import Banner from '../components/Banner';
 import bannerHomeImg from '../assets/banner_home.png';

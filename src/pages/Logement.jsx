@@ -2,7 +2,6 @@
 // LOGEMENT.JSX - Page de détail d'un logement
 // ===============================================
 
-import React from 'react';
 import {useParams} from 'react-router-dom';
 import {Navigate} from 'react-router-dom';
 import Slideshow from '../components/Slideshow';

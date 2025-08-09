@@ -3,6 +3,7 @@
 //   Fichier : _footer.scss
 // ==============================
 
+@use './variables' as *;
 .footer {
    // ========== CONTENEUR PRINCIPAL ==========
     background-color: $background-dark;  

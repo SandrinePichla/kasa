@@ -3,6 +3,7 @@
 //   Fichier : _home.scss
 // ==============================
 
+@use './variables' as *;
 .home {
     // ========== CONTENEUR PRINCIPAL ==========
     max-width: 1200px;                  

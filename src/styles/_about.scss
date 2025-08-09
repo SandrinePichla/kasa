@@ -3,6 +3,7 @@
 //   Fichier : _about.scss
 // ==============================
 
+@use './variables' as *;
 .about {
     // ========== CONTENEUR PRINCIPAL ==========
     max-width: 1200px;                  

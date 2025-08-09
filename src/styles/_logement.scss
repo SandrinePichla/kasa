@@ -3,6 +3,7 @@
 //   Fichier : _logement.scss
 // ==============================
 
+@use './variables' as *;
 .logement {
     // ========== CONTENEUR PRINCIPAL ==========
     max-width: 1240px;                  

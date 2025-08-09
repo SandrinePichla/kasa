@@ -2,7 +2,7 @@
 // COLLAPSE.JSX - Composant menu déroulant réutilisable
 // ===============================================
 
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {FaChevronUp} from 'react-icons/fa';
 
 /**

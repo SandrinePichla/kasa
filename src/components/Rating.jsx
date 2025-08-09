@@ -2,7 +2,6 @@
 // RATING.JSX - Composant d'affichage des notes
 // ===============================================
 
-import React from 'react';
 import {FaStar} from "react-icons/fa";
 
 /**

@@ -5,24 +5,24 @@
 
 // ========== IMPORTS ==========
 // Import des variables d'abord (nécessaires pour tous les autres fichiers)
-@import './variables';
+@use './variables' as *; // Imports toutes les variables sans leur préfixe
 
 // Import des composants de layout
-@import './header';
-@import './footer';
+@use './header';
+@use './footer';
 
 // Import des pages
-@import './home';
-@import './about';
-@import './logement';
-@import './notfound';
+@use './home';
+@use './about';
+@use './logement';
+@use './notfound';
 
 // Import des composants réutilisables
-@import './banner';
-@import './collapse';
-@import './rating';
-@import './slideshow';
-@import './card';
+@use './banner';
+@use './collapse';
+@use './rating';
+@use './slideshow';
+@use './card';
 
 // ========== RESET CSS ==========
 // Supprime les marges et paddings par défaut de tous les éléments

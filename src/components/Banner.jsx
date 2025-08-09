@@ -2,8 +2,6 @@
 // BANNER.JSX - Composant bannière réutilisable
 // ===============================================
 
-import React from 'react';
-
 /**
  * Composant Banner réutilisable
  * @param {string} image - URL de l'image de fond

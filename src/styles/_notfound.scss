@@ -3,6 +3,7 @@
 //   Fichier : _notfound.scss
 // ==============================
 
+@use './variables' as *;
 .not-found {
    // ========== CONTENEUR PRINCIPAL ==========
     margin: 0 40px;                     // Marge horizontale pour éviter de coller aux bords

@@ -3,6 +3,7 @@
 //   Fichier : _slideshow.scss
 // ==============================
 
+@use './variables' as *;
 .slideshow {
     // ========== CONTENEUR PRINCIPAL ==========
     position: relative;                 // Pour positionner les éléments en absolute

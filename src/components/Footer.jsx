@@ -2,7 +2,6 @@
 // FOOTER.JSX - Composant de pied de page
 // ===============================================
 
-import React from 'react';
 import logoWhiteImg from '../assets/logo_white.png';
 
 /**

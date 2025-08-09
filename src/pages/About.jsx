@@ -2,7 +2,6 @@
 // ABOUT.JSX - Page à propos
 // ===============================================
 
-import React from 'react';
 import Banner from '../components/Banner';
 import bannerAboutImg from '../assets/banner_about.png';
 import Collapse from '../components/Collapse';

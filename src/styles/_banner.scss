@@ -3,6 +3,7 @@
 //   Fichier : _banner.scss
 // ==============================
 
+@use './variables' as *;
 .banner {
     // ========== CONTENEUR PRINCIPAL ==========
     width: 100%;                        

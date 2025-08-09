@@ -3,6 +3,7 @@
 //   Fichier : _card.scss
 // ==============================
 
+@use './variables' as *;
 .card {
         // ========== CONTENEUR PRINCIPAL ==========
     position: relative;                 // Pour positionner le titre en absolute

@@ -3,6 +3,7 @@
 //   Fichier : _collapse.scss
 // ==============================
 
+@use './variables' as *;
 .collapse {
      // ========== CONTENEUR PRINCIPAL ==========
     border-radius: 5px;                 
