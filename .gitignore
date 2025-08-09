@@ -1,3 +1,7 @@
+
+.vite/deps/*
+.vite/deps/_metadata.json
+
 # Logs
 logs
 *.log
@@ -22,3 +26,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
