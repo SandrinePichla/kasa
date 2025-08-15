@@ -4,8 +4,8 @@
 
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
-import {HashRouter} from 'react-router-dom'; // HashRouter pour compatibilité déploiement statique
-import './styles/main.scss'
+import {HashRouter} from 'react-router-dom'; // HashRouter : compatibilité déploiement statique
+import './styles/main.scss'  
 import App from './App.jsx'
 
 

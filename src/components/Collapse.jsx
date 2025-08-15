@@ -7,9 +7,9 @@ import {FaChevronUp} from 'react-icons/fa';
 
 /**
  * Composant Collapse menu déroulant réutilisable
- * @param {string} title - Titre de la section
- * @param {string|JSX} content - Contenu à afficher/masquer
- * @param {string} variant - Variante de style (about, logement, etc.)
+ * @param {string} title
+ * @param {string|JSX} content
+ * @param {string} variant
  */
 function Collapse({title, content, variant }) {
     // État isOpen = false, fonction setIsOpen pour changer l'état

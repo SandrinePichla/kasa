@@ -10,7 +10,8 @@ import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'; // pour utiliser d
  * @param {Array} pictures - Tableau d'URLs d'images
  */
 function Slideshow({pictures}) {
-    // Index de l'image actuellement affichée, on commence à 0
+    // On utilise useState pour stocker l'index de l'image actuellement affichée (initialement 0) 
+    //
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Gestion du cas où aucune image n'est fournie
