@@ -14,7 +14,7 @@ import logements from '../data/logements.json'; // Import des données JSON
  * Récupère l'ID depuis l'URL et affiche les informations correspondantes
  */
 function Logement() {
-    // Récupération de l'ID depuis les paramètres d'URL (id) 
+    // hook Récupération de l'ID depuis les paramètres d'URL (id) 
     const {id} = useParams();
 
      // Recherche du logement correspondant à l'ID
@@ -31,18 +31,19 @@ function Logement() {
      * @returns {Object} - {firstName, lastName}
      */
     const formatHostName = (name) => {
-        const names = name.split(' '); //La méthode split(' ') découpe la chaîne à chaque espace, et crée un tableau de mots
+        const names = name.split(' '); //coupe la chaîne à chaque espace, et crée un tableau de mots
         if (names.length >= 2) { // Si le nom contient plusieurs mots                       
             const firstName = names[0]; // Prend le premier mot comme prénom 
-            const lastName = names.slice(1).join(' '); // et le reste comme nom de famille slice(1) prend tous les mots sauf le premier join(' ') les recompose en une chaîne avec des espaces
+            const lastName = names.slice(1).join(' '); // et le reste comme nom de famille slice(1) prend tous les mots sauf le premier
             return {firstName, lastName}; //On renvoie un objet avec le prénom et le nom 
         }
-        return {firstName: name, lastName: ''}; //Sinon, si le nom complet ne contient qu’un seul mot On considère que tout est le prénom, Le nom de famille reste vide ("")
+        return {firstName: name, lastName: ''}; //Sinon, si qu’un seul mot = prénom,
     };
 
     // Extraction du prénom et nom de l'hôte
     const {firstName, lastName} = formatHostName(logement.host.name);
 
+    // Affichage si le logement existe : 
     return (
         <main className="logement">
 

@@ -1,31 +1,29 @@
 // ===============================================
-// APP.JSX - Composant racine de l'application
+// APP.JSX - Layout de l'application
 // ===============================================
 
-import Header from './components/Header'; // On importe le composant Header
+import Header from './components/Header'; 
 import Footer from './components/Footer';
-import AppRouter from './components/AppRouter'; // On importe le composant AppRouter
+import AppRouter from './components/AppRouter'; 
 
 /**
  * Composant principal de l'application
- * Structure : Header fixe + Contenu dynamique + Footer fixe
+ * Structure fixe du site
  */
 
 function App() {
     return (
         <div className="App">
-
-            {/* Header avec navigation - affiché sur toutes les pages */}
+            
             <Header/> 
             
             <main>
 
-                {/**  J'appelle mon composant AppRouter ici **/                }
+                {/**  afficher la page en fonction de l’URL **/}
                 <AppRouter/> 
 
-            </main>
-                
-            {/* Footer - affiché sur toutes les pages */}
+            </main>                
+           
             <Footer/>
             
         </div>

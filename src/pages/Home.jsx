@@ -2,7 +2,7 @@
 // HOME.JSX - Page d'accueil
 // ===============================================
 
-import logements from '../data/logements.json';
+import logements from '../data/logements.json'; // Import les données des logements
 import Banner from '../components/Banner';
 import bannerHomeImg from '../assets/banner_home.png';
 import Card from '../components/Card';

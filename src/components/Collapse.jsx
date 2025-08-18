@@ -12,7 +12,7 @@ import {FaChevronUp} from 'react-icons/fa';
  * @param {string} variant
  */
 function Collapse({title, content, variant }) {
-    // État isOpen = false, fonction setIsOpen pour changer l'état
+    // Hook État isOpen = false, fonction setIsOpen pour changer l'état
     const [isOpen, setIsOpen] = useState(false);
 
     return (

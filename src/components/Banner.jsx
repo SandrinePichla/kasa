@@ -12,7 +12,7 @@ function Banner({image, text}) {
         <div
             className="banner"
             style={{
-                // Image de fond dynamique passée en props
+                // Image de fond passée en props + style en ligne
                 backgroundImage: `url(${image})`
             }}>
                 {/* Affichage conditionnel du texte */}

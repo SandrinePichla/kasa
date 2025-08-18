@@ -1,5 +1,5 @@
 // ===============================================
-// MAIN.JSX - Point d'entrée de l'application
+// MAIN.JSX - Point d'entrée de l'application react
 // ===============================================
 
 import {StrictMode} from 'react'
